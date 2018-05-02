@@ -14,7 +14,7 @@ void bmm(double* matrixA, double* matrixB, double* matrixC, int length, int bloc
           for (unsigned int k = kk; k < kk + blockSize; k++) {
             sum += matrixA[i*length+k] * matrixB[k*length+j];
           }
-          matrixC[i*length+j] += sum;
+          matrixC[i*length+j] = sum;
         }
       }
     }
